@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Profile Setup{% endblock %}
+{% block content %}
+    <h1>Complete Your Profile</h1>
+
+<form action="{{ url_for('profile_setup') }}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required><br>
+    <label for="google_id">Google ID:</label>
+    <input type="text" name="google_id"><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" required><br>
+    <label for="full_name">Full Name:</label>
+    <input type="text" name="full_name"><br>
+    <label for="profile_picture">Profile Picture URL:</label>
+    <input type="text" name="profile_picture"><br>
+    <label for="role">Role:</label>
+    <input type="text" name="role" value="user"><br>
+    <label for="preferences">Preferences (JSON):</label>
+    <input type="text" name="preferences"><br>
+    <label for="status">Status:</label>
+    <input type="text" name="status" value="active"><br>
+    <label for="bio">Bio:</label>
+    <input type="text" name="bio"><br>
+    <label for="location">Location:</label>
+    <input type="text" name="location"><br>
+    <button type="submit">Complete Profile</button>
+    {% endblock %}
